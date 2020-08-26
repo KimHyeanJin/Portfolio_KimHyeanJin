@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HDC 영창</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../include/common/css/common.css" type="text/css">
+<script type="text/JavaScript" src="../../include/common/js/jquery-1.7.2.min.js"></script>
+</head>
+<body class="bg">
+<script type="text/JavaScript">
+	$(document).ready(function(){  
+		$(".topnav").hover(function() { //마우스를 topnav에 오버시
+			$("#Sheader").parent().find(".navi_set").slideDown('normal').show(); //subnav가 내려옴.
+			$('.navi_set').parent().hover(function() {  
+			}, function(){  
+				$("#Sheader").parent().find(".navi_set").slideUp('fast'); //subnav에서 마우스 벗어났을 시 원위치시킴  
+			});  
+		}); 
+		
+		$(".navi_set ul li a").hover(function(){
+			$(this).parent().find("img").show();
+			$(this).parent().hover(function() {  
+			}, function(){  
+				$(this).parent().find("img").hide(); 
+			});
+		});
+		
+		$(".topnav a").hover(function(){
+			$(this).parent().find("div").show();
+			$(this).parent().find("div").css({"width":"141px"});
+			$(this).parent().hover(function() {  
+			}, function(){  
+				$(this).parent().find("div").hide(); 
+				$(this).parent().find("div").css({"width":"1px"});
+			});
+		});
+		
+		$(function(){
+			$("ul.content li:not("+$(".tab li a.selected").attr("href")+")").hide();
+			$("ul.tab li a").click(function(){
+				$("ul.tab li a").removeClass("selected");
+				$(this).addClass("selected");
+				$("ul.content li").hide();
+				$($(this).attr("href")).fadeIn();
+			});
+		});
+		
+		$(function(){
+			$("body").append("<div id='black'></div><div id='#modal'></div>");
+			
+			$("#black").click(function(){
+				$(this).hide()
+				$("#modal").hide();
+			});
+			
+			$("#modal").click(function(){
+				$(this).hide()
+				$("#black").hide();
+			});
+			
+			$(".comp").click(function(){
+				$("#black").show();
+				$("#modal").show();
+				return false;
+			});
+			
+			if($.browser.msie && $.browser.version<7){
+				$(window).scroll(function(){
+					$("#black").css('top',$(document).scrollTop());
+					$("#modal").css('top',($(document).scrollTop()+$(window).height()/2) +"px");
+				});
+			}
+			
+		});
+	});  
+</script>
+
+<div id="Swrap">
+	<div id="Sheader">
+		<div class="navi_set">
+				<ul>
+					<li><a href="ceo.html">CEO</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="value.html">가치체계</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="history.html">주요연혁</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="ci.html">CI</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="location.html">본사위치</a><img src="../../image/common/select.gif" height="12px;"></li>
+				</ul>
+				
+				<ul>
+					<li><a href="digital.html">디지털음향</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="piano.html">피아노</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="#">관현악기</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="#">CMS사업</a><img src="../../image/common/select.gif" height="12px;"></li>
+				</ul>
+				<ul>
+					<li><a href="news.html">뉴스룸</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="#">콩쿠르</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="society.html">사회공헌</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="manage.html">윤리경영</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="subsidiary.html">계열사</a><img src="../../image/common/select.gif" height="12px;"></li>
+				</ul>
+				<ul class="none">
+					<li><a href="#">온라인쇼핑</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="shop.html">직영쇼핑</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="network.html">네트워크</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="#">A/S안내</a><img src="../../image/common/select.gif" height="12px;"></li>
+				</ul>
+			</div>
+		<div id="all">
+			<span class="logo"><a href="../../index.html"><img src="../../image/common/logo.png"></a></span>
+			<div class="nav">
+				<ul>
+					<li class="topnav"><a href="#">회사소개</a><div class="li_line1"></div></li>
+					<li class="topnav"><a href="#">사업분야</a><div class="li_line2"></div></li>
+					<li class="topnav"><a href="#">커뮤니티</a><div class="li_line3"></div></li>
+					<li class="topnav"><a href="#">고객지원</a><div class="li_line4"></div></li>
+				</ul>
+			</div>
+			
+		</div>
+	</div>
+	
+	<div id="Scontents">
+		<div id="subbox">
+			<div class="subMu">
+				<ul>
+					<li><a href="news.html">뉴스룸</a></li>
+					<li>l</li>
+					<li><a href="#">콩쿠르</a></li>
+					<li>l</li>
+					<li><a href="society.html">사회공헌</a></li>
+					<li>l</li>
+					<li><a href="manage.html">윤리경영</a></li>
+					<li>l</li>
+					<li class="select"><a href="subsidiary.html">계열사</a></li>
+				</ul>
+			</div>
+		</div	>
+		
+<!--tinyslider ex17, ex16-->
+		
+		<div id="subsi">
+			<div class="tags">
+				<div class="tagline"></div>
+				계열사
+			</div>
+			
+			<div id="company">
+				<ul class="comp">
+					<a href="#">
+						<li><img src="../../image/sub/subsidiary/img01.png"></li>
+						<li class="compname">HDC</li>
+						<li class="blue"><div></div></li>
+					</a>
+				</ul>
+				
+				<ul class="comp">
+					<a href="#">
+						<li><img src="../../image/sub/subsidiary/img02.png"></li>
+						<li class="compname">HDC현대산업개발</li>
+						<li class="blue"><div></div></li>
+					</a>
+				</ul>
+				<ul class="comp">
+					<a href="#">
+						<li><img src="../../image/sub/subsidiary/img03.png"></li>
+						<li class="compname">HDC 현대EP</li>
+						<li class="blue"><div></div></li>
+					</a>
+				</ul>
+				<ul class="comp">
+					<a href="#">
+					<li><img src="../../image/sub/subsidiary/img04.png"></li>
+					<li class="compname">HDC 아이콘트롤스</li>
+					<li class="blue"><div></div></li>
+					</a>
+				</ul>
+				<ul class="comp">
+					<a href="#">
+						<li><img src="../../image/sub/subsidiary/img05.png"></li>
+						<li class="compname">HDC 아이서비스</li>
+						<li class="blue"><div></div></li>
+					</a>
+				</ul>
+				<ul class="comp">
+					<a href="#">
+						<li><img src="../../image/sub/subsidiary/img06.png"></li>
+						<li class="compname">HDC 아이파크몰</li>
+						<li class="blue"><div></div></li>
+					</a>
+				</ul>
+				<ul class="comp">
+					<a href="#">
+						<li><img src="../../image/sub/subsidiary/img07.png"></li>
+						<li class="compname">HDC 아이앤콘스</li>
+						<li class="blue"><div></div></li>
+					</a>
+				</ul>
+				<ul class="comp">
+					<a href="#">
+						<li><img src="../../image/sub/subsidiary/img08.png"></li>
+						<li class="compname">HDC 호텔</li>
+						<li class="blue"><div></div></li>
+					</a>
+				</ul>
+				<ul class="comp">
+					<a href="#">
+						<li><img src="../../image/sub/subsidiary/img09.png"></li>
+						<li class="compname">HDC 현대PCE</li>
+						<li class="blue"><div></div></li>
+					</a>
+				</ul>
+				<ul class="comp">
+					<a href="#">
+						<li><img src="../../image/sub/subsidiary/img10.png"></li>
+						<li class="compname">HDC 스포츠</li>
+						<li class="blue"><div></div></li>
+					</a>
+				</ul>
+				<ul class="comp">
+					<a href="#">
+						<li><img src="../../image/sub/subsidiary/img11.png"></li>
+						<li class="compname">HDC 자산운용</li>
+						<li class="blue"><div></div></li>
+					</a>
+				</ul>
+				<ul class="comp">
+					<a href="#">
+						<li><img src="../../image/sub/subsidiary/img12.png"></li>
+						<li class="compname">HDC 신라면세점</li>
+						<li class="blue"><div></div></li>
+					</a>
+				</ul>
+				<ul class="comp">
+					<a href="#">
+						<li><img src="../../image/sub/subsidiary/img13.png"></li>
+						<li class="compname">부동산114</li>
+						<li class="blue"><div></div></li>
+					</a>
+				</ul>
+				<ul class="comp">
+					<a href="#">
+						<li><img src="../../image/sub/subsidiary/img14.png"></li>
+						<li class="compname">서울춘천고속도로</li>
+						<li class="blue"><div></div></li>
+					</a>
+				</ul>
+				<ul class="comp">
+					<li><img src="../../image/sub/subsidiary/img15.png"></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div id="modal">
+			<ul>
+				<li class="modal_info">
+					<img src="../../image/sub/subsidiary/logo01.gif" class="logo01">
+					<div class="modal_text">신성장동력을 발굴하며 HDC그룹의 새로운 미래를 열어갑니다.
+					2018년 5월 지주회사 체제 전환 이후, HDC는 HDC그룹의 지주회사로 새롭게 출범했습니다.
+					지난 40여 년간 HDC그룹이 추구해 온 혁신적이고 독창적인 가치를 바탕으로, HDC는 신성장동력 발굴,
+					브랜드가치 증진, 인재 발굴과 육성을 통해 HDC그룹의 경쟁력과 주주 가치를 높여가고 있습니다. 
+					HDC는 기업의 사회적 책임을 실천하며 고객과 주주, 구성원들과 함께 풍요로운 삶과 신뢰할 수 있는 세
+					상을 만들어 가도록 끊임없이 노력할 것입니다.<br>
+					</br>
+					주업종 : 지주사업, 브랜드 관리, 부동산 임대사업, 신사업 관련 투자</br>
+					회사주소 : 06170 서울특별시 강남구 영동대로 520 아이파크타워 15층</br>
+					설립일자 : 1976년 03월 25일</div>
+					<a href="#"><div class="modal_home">홈페이지 바로가기<img src="../../image/sub/digital/home.gif"></div></a>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="line"></div>
+	</div>
+	
+	<div id="Sfooter">
+		<span class="fbg"><img src="../../image/common/fbg.png"></span>
+		<div id="fbox">
+			<span class="left">
+				<a href="#"><img src="../../image/common/flogo.png"></a><br>
+				<a href="#">이메일 무단수집거부</a>│<a href="#">사이트맵</a><br>
+				22840 인천광역시 서구 봉수대로 196<br>
+				COPYRIGHT@HDCYOUNGCHANG COMPANY.ALL RIGHT RESERVED.
+			</span>
+			<span class="right">
+				<a href="https://blog.naver.com/hdc-youngchang"><img src="../../image/common/blog.png"></a>
+				<a href="https://www.youtube.com/user/yckurzweil/featured?disable_polymer=1"><img src="../../image/common/youtube.png"></a>
+				<a href="https://www.facebook.com/ycpiano/"><img src="../../image/common/facebook.png"></a>
+				<a href="https://www.instagram.com/hdcyc_official/"><img src="../../image/common/instagram.png"></a>
+			</span>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HDC 영창</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../include/common/css/common.css" type="text/css">
+<script type="text/JavaScript" src="../../include/common/js/jquery-1.7.2.min.js"></script>
+</head>
+<body class="bg">
+<script type="text/JavaScript">
+	$(document).ready(function(){  
+		$(".topnav").hover(function() { //마우스를 topnav에 오버시
+			$("#Sheader").parent().find(".navi_set").slideDown('normal').show(); //subnav가 내려옴.
+			$('.navi_set').parent().hover(function() {  
+			}, function(){  
+				$("#Sheader").parent().find(".navi_set").slideUp('fast'); //subnav에서 마우스 벗어났을 시 원위치시킴  
+			});  
+		}); 
+		
+		$(".navi_set ul li a").hover(function(){
+			$(this).parent().find("img").show();
+			$(this).parent().hover(function() {  
+			}, function(){  
+				$(this).parent().find("img").hide(); 
+			});
+		});
+		
+		$(".topnav a").hover(function(){
+			$(this).parent().find("div").show();
+			$(this).parent().find("div").css({"width":"141px"});
+			$(this).parent().hover(function() {  
+			}, function(){  
+				$(this).parent().find("div").hide(); 
+				$(this).parent().find("div").css({"width":"1px"});
+			});
+		});
+		
+		$(function(){
+			$("ul.content li:not("+$(".tab li a.selected").attr("href")+")").hide();
+			$("ul.tab li a").click(function(){
+				$("ul.tab li a").removeClass("selected");
+				$(this).addClass("selected");
+				$("ul.content li").hide();
+				$($(this).attr("href")).fadeIn();
+			});
+		});
+	});  
+</script>
+
+<div id="Swrap">
+	<div id="Sheader">
+		<div class="navi_set">
+				<ul>
+					<li><a href="ceo.html">CEO</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="value.html">가치체계</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="history.html">주요연혁</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="ci.html">CI</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="location.html">본사위치</a><img src="../../image/common/select.gif" height="12px;"></li>
+				</ul>
+				
+				<ul>
+					<li><a href="digital.html">디지털음향</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="piano.html">피아노</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="#">관현악기</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="#">CMS사업</a><img src="../../image/common/select.gif" height="12px;"></li>
+				</ul>
+				<ul>
+					<li><a href="news.html">뉴스룸</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="#">콩쿠르</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="society.html">사회공헌</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="manage.html">윤리경영</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="subsidiary.html">계열사</a><img src="../../image/common/select.gif" height="12px;"></li>
+				</ul>
+				<ul class="none">
+					<li><a href="#">온라인쇼핑</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="shop.html">직영쇼핑</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="network.html">네트워크</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="#">A/S안내</a><img src="../../image/common/select.gif" height="12px;"></li>
+				</ul>
+			</div>
+		<div id="all">
+			<span class="logo"><a href="../../index.html"><img src="../../image/common/logo.png"></a></span>
+			<div class="nav">
+				<ul>
+					<li class="topnav"><a href="#">회사소개</a><div class="li_line1"></div></li>
+					<li class="topnav"><a href="#">사업분야</a><div class="li_line2"></div></li>
+					<li class="topnav"><a href="#">커뮤니티</a><div class="li_line3"></div></li>
+					<li class="topnav"><a href="#">고객지원</a><div class="li_line4"></div></li>
+				</ul>
+			</div>
+			
+		</div>
+	</div>
+	
+	<div id="Scontents">
+		<div id="subbox">
+			<div class="subMu">
+				<ul>
+					<li><a href="ceo.html">CEO</a></li>
+					<li>l</li>
+					<li><a href="value.html">가치체계</a></li>
+					<li>l</li>
+					<li class="select"><a href="history.html">주요연혁</a></li>
+					<li>l</li>
+					<li><a href="ci.html">CI</a></li>
+					<li>l</li>
+					<li><a href="location.html">본사위치</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div id="history">
+			<div class="tags">
+				<div class="tagline"></div>
+				주요연혁
+			</div>
+			
+			<div id="container">
+				<ul class="tab">
+					<li><a href="#menu1" class="selected">2010's~</a></li>
+					<li><a href="#menu2">2000's</a></li>
+					<li><a href="#menu3">1990's</a></li>
+					<li><a href="#menu4">1980's</a></li>
+					<li><a href="#menu5">~1956's</a></li>
+				</ul>
+				<ul class="content">
+					<li id="menu1">
+						<table>
+							<colgroup><col width="138px;"><col width="188px;"><col width="88px;"><col width="554px;"></colgroup>
+							<tr>
+								<th rowspan="8" class="score"></th>
+								<th class="tit01">2018</th>
+								<th class="tit02">04월</th>
+								<th class="tit03">HDC영창 사명 변경</th>
+							</tr>
+							<tr>
+								<th class="tit01">2016</th>
+								<th class="tit02">12월<br>01월</th>
+								<th class="tit03">국내최초 본사 직영 아울렛 매장 '영창팩토리스토어' 오픈<br>고음질 음원 구동 차세대 음원 반도체 'LENA'개발 및 글로벌 공개</th>
+							</tr>
+							<tr>
+								<th class="tit01">2015</th>
+								<th class="tit02">02월</th>
+								<th class="tit03">레이 커즈와일 제57회 2015 테크니컬 그래미(Technical GRAMMY® Award) 수상</th>
+							</tr>
+							<tr>
+								<th class="tit01">2014</th>
+								<th class="tit02">11월<br>09월</th>
+								<th class="tit03">한국소비자협회 주관 ‘2014 ‘대한민국 소비자대상’ 수상<br>
+									한중 국제 음악콩쿠르 포니정재단과 함하는 HDC 영창 콩쿠르 격상</th>
+							</tr>
+							<tr>
+								<th class="tit01">2013</th>
+								<th class="tit02">09월</th>
+								<th class="tit03">국내 최대규모 음악콩쿠르 포니정재단과 함께하는 HDC 영창 콩쿠르 첫 개최</th>
+							</tr>
+							<tr>
+								<th class="tit01">2012</th>
+								<th class="tit02">02월</th>
+								<th class="tit03">레이 커즈와일 박사 미국 NAMM쇼 올해의 공로상 (Lifetime Archievement Award)수상</th>
+							</tr>
+							<tr>
+								<th class="tit01">2011</th>
+								<th class="tit02">10월</th>
+								<th class="tit03">중국 ‘10대 영향력 있는 악기기업’ 선정</th>
+							</tr>
+							<tr>
+								<th class="tit01">2010</th>
+								<th class="tit02">09월</th>
+								<th class="tit03">뉴욕 링컨센터 데이비드 코크 극장 (David H. Koch Theater) 공식피아노 <br>지정</th>
+							</tr>
+							
+						</table>
+					</li>
+					
+					<li id="menu2">
+						<table>
+							<colgroup><col width="138px;"><col width="188px;"><col width="88px;"><col width="554px;"></colgroup>
+							<tr>
+								<th rowspan="5" class="score"></th>
+								<th class="tit01">2006</th>
+								<th class="tit02">05월</th>
+								<th class="tit03">현대산업개발 그룹 편입</th>
+							</tr>
+							<tr>
+								<th class="tit01">2003</th>
+								<th class="tit02">06월<br>07월</th>
+								<th class="tit03">레이 커즈와일 제57회 2015 테크니컬 그래미(Technical GRAMMY® Award) 수상</th>
+							</tr>
+							<tr>
+								<th class="tit01">2002</th>
+								<th class="tit02">03월<br>04월</th>
+								<th class="tit03">한국소비자협회 주관 ‘2014 ‘대한민국 소비자대상’ 수상<br>
+									한중 국제 음악콩쿠르 포니정재단과 함하는 HDC 영창 콩쿠르 격상</th>
+							</tr>
+							<tr>
+								<th class="tit01">2001</th>
+								<th class="tit02">12월</th>
+								<th class="tit03">국내 최대규모 음악콩쿠르 포니정재단과 함께하는 HDC 영창 콩쿠르 첫 개최</th>
+							</tr>
+							<tr>
+								<th class="tit01">2000</th>
+								<th class="tit02">11월</th>
+								<th class="tit03">레이 커즈와일 박사 미국 NAMM쇼 올해의 공로상 (Lifetime Archievement Award)수상</th>
+							</tr>
+						</table>
+					</li>
+					<li id="menu3">
+						<table>
+							<colgroup><col width="138px;"><col width="188px;"><col width="88px;"><col width="554px;"></colgroup>
+							<tr>
+								<th rowspan="8" class="score"></th>
+								<th class="tit01">1999</th>
+								<th class="tit02">01월<br>09월<br> <br>11월</th>
+								<th class="tit03">미국 신디사이저 시장 1위 달성<br>
+														한국표준협회 수여 "KS TOP 10상" 수상 <br>MIX지 선정올해의 기술혁신상 (TEC) 수상  (K-2500AES )<br>
+														독일 스타인웨이앤선즈 피아노 생산 계약</th>
+							</tr>
+							<tr>
+								<th class="tit01">1997</th>
+								<th class="tit02">01월<br>03월<br> <br></th>
+								<th class="tit03">美 오디오 음향관계 전문지인 MIX 기술혁신상(TEC) 수상 (K-2500)<br>
+														독일 스타인웨이앤선즈 피아노 설계 전문가 영입<br>
+														소비자가뽑은광고 1위 평화의소리 </th>
+							</tr>
+							<tr>
+								<th class="tit01">1996</th>
+								<th class="tit02">01월<br>02월<br><br>12월<br> <br></th>
+								<th class="tit03">美 MMR 음악전문지 95년 최고의 디지털피아노선정 (MARK-10)<br>
+														美 애너하임 NAMM쇼 세계최고 디지털피아노 선정 (Mark-10)<br>
+														국내 피아노업계 최초 전공정 ISO9001인증(영국 LRQA)<br>
+														美 EMM(Electronic Music Magazine)지 '1997년 최고의 신디사이저'로 K-2500선정</th>
+							</tr>
+							<tr>
+								<th class="tit01">1995</th>
+								<th class="tit02">01월<br>02월<br> <br>09월<br>10월<br>11월</th>
+								<th class="tit03">제4회 KEJI 경제정의기업賞 수상<br>
+														Le Monde de la Musique 세계최고 전자악기 베스트5 선정<br>
+														(MARK-10, RG-200 동시 선정)<br>
+														중국 천진공장 준공<br>
+														피아노 및 전자악기 일류화상품 표시 승인<br>
+														美 MIX지 PC-88 세계최고 기술혁신상 수상<br>
+														</th>
+							</tr>
+							<tr>
+								<th class="tit01">1993</th>
+								<th class="tit02">02월<br>08월<br>11월<br>12월</th>
+								<th class="tit03">美 KEY BOARD지  올해의 Best 전자악기로 K-2000 선정<br>
+														제32회 국제기능올림픽 木工부문 금메달 획득<br>
+														국내 최초 방음 피아노 개발<br>
+														미국 美 MIX지 K-2000 세계최고 기술혁신상 수상</th>
+							</tr>
+							<tr>
+								<th class="tit01">1992</th>
+								<th class="tit02">02월<br>06월<br>10월<br>12월</th>
+								<th class="tit03">상트페테르부르크 국립음악원 전량 영창피아노 구입<br>
+														신디사이저, 디지털피아노 GD마크획득<br>
+														佛 "디아파종"지 세계 10大 업라이트 피아노에 선정<br>
+														日本 KEY BOARD지 올해의 BEST전자악기로 K-2000 선정</th>
+							</tr>
+							<tr>
+								<th class="tit01">1991</th>
+								<th class="tit04"><br> <br>02월<br>04월<br>07월<br> <br> <br> <br></th>
+								<th class="tit05">세계 피아노 시장 점유율 1위 달성<br>
+														02Le Monde de la Musique 세계최고 피아노 TOP5 선정<br>
+														04중국 천진 합자 주물공장 설립(Y.C.F)<br>
+														07 국제기능올림픽 목공 부문 금메달<br>
+														美 KEY BOARD지 세계 디지탈피아노 3대 명품 선정 (Mark IV)<br>
+														국내 최초 신디사이저 커즈와일 K-2000 개발</th>
+							</tr>
+							<tr>
+								<th class="tit01">1990</th>
+								<th class="tit02">06월<br>09월</th>
+								<th class="tit03">커즈와일 인수와 보스턴 연구소(YCRDI) 설립<br>
+														영창 커즈와일 전자악기 수출개시</th>
+							</tr>
+						</table>
+					</li>
+					<li id="menu4">
+						<table>
+							<colgroup><col width="138px;"><col width="188px;"><col width="88px;"><col width="554px;"></colgroup>
+							<tr>
+								<th rowspan="8" class="score"></th>
+								<th class="tit01">1989</th>
+								<th class="tit02">03월</th>
+								<th class="tit03">유럽현지법인 설립</th>
+							</tr>
+							<tr>
+								<th class="tit01">1988</th>
+								<th class="tit02">08월<br>12월<br> <br></th>
+								<th class="tit03">생산성 대상 수상(자동화 추진부문)<br>
+														우수상표(기타부문) 최우수상 수상(특허청 주관)<br>
+														佛 르몽드지 세계 피아노 "EXCELLENT-BUY " 선정</th>
+							</tr>
+							<tr>
+								<th class="tit01">1987</th>
+								<th class="tit02"><br>05월</th>
+								<th class="tit03">미국 타임세이버스사에 영창 목공기계류 수출<br>
+														해외 악기업체 중 최초 일본공업규격(JIS) 획득</th>
+							</tr>
+							<tr>
+								<th class="tit01">1985</th>
+								<th class="tit02">01월</th>
+								<th class="tit03">캐나다 현지법인 설립 – YOUNG CHANG CANADA</th>
+							</tr>
+							<tr>
+								<th class="tit01">1984</th>
+								<th class="tit02">03월<br> <br>11월</th>
+								<th class="tit03">조세의 날 석탑산업훈장 수상<br>
+														미국 LA 현지법인 설립 – YOUNG CHANG AMERICA<br>
+														수출의 날 2천만불탑 수상</th>
+							</tr>
+							<tr>
+								<th class="tit01">1983</th>
+								<th class="tit02">06월<br>11월</th>
+								<th class="tit03">국내최초 피아노부문 KS인증 획득<br>
+														독일 피아노부문 국제기술상 수상</th>
+							</tr>
+							<tr>
+								<th class="tit01">1982</th>
+								<th class="tit02"><br>05월<br>10월</th>
+								<th class="tit03">풀 콘서트용 275사이즈 그랜드피아노 국내최초 개발<br>
+														스페인 피아노 국제품질상 수상<br>
+														아랍 프레스티지상 수상</th>
+							</tr>
+							<tr>
+								<th class="tit01">1981</th>
+								<th class="tit02">03월<br>06월<br>11월</th>
+								<th class="tit03">프랑크프루트 뮤직메세에서 8백만달러 수출계약<br>
+														시카고 국제악기박람회 대당 4천5백달러 1백대 판매<br>
+														수출의날 천만불탑 수상</th>
+							</tr>
+						</table>
+					</li>
+					<li id="menu5">
+						<table>
+							<colgroup><col width="138px;"><col width="188px;"><col width="88px;"><col width="554px;"></colgroup>
+							<tr>
+								<th rowspan="7" class="score"></th>
+								<th class="tit01">1978</th>
+								<th class="tit02">11월</th>
+								<th class="tit03">전문 목공기계 생산 시작<br>인천 가좌동에 악기제조 종합 공장 건립</th>
+							</tr>
+							<tr>
+								<th class="tit01">1977</th>
+								<th class="tit02">07월</th>
+								<th class="tit03">국제기능올림픽 대회 목공부문 금메달과 동탑산업훈장</th>
+							</tr>
+							<tr>
+								<th class="tit01">1973</th>
+								<th class="tit02">08월</th>
+								<th class="tit03">독일 뮌헨 국제기능올림픽 목공부문 은메달</th>
+							</tr>
+							<tr>
+								<th class="tit01">1972</th>
+								<th class="tit02">12월</th>
+								<th class="tit03">국내 최초 일본에 4,500대 피아노 수출</th>
+							</tr>
+							<tr>
+								<th class="tit01">1971</th>
+								<th class="tit02">04월</th>
+								<th class="tit03">영창브랜드로 홍콩에 국내 최초 피아노수출 시작</th>
+							</tr>
+							<tr>
+								<th class="tit01">1968</th>
+								<th class="tit02">07월</th>
+								<th class="tit03">스위스국제기능올림픽 대회 목공부문 금메달</th>
+							</tr>
+							<tr>
+								<th class="tit01">1956</th>
+								<th class="tit02">11월</th>
+								<th class="tit03">신향피아노 설립</th>
+							</tr>
+						</table>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="line"></div>
+	</div>
+	
+	<div id="Sfooter">
+		<span class="fbg"><img src="../../image/common/fbg.png"></span>
+		<div id="fbox">
+			<span class="left">
+				<a href="#"><img src="../../image/common/flogo.png"></a><br>
+				<a href="#">이메일 무단수집거부</a>│<a href="#">사이트맵</a><br>
+				22840 인천광역시 서구 봉수대로 196<br>
+				COPYRIGHT@HDCYOUNGCHANG COMPANY.ALL RIGHT RESERVED.
+			</span>
+			<span class="right">
+				<a href="https://blog.naver.com/hdc-youngchang"><img src="../../image/common/blog.png"></a>
+				<a href="https://www.youtube.com/user/yckurzweil/featured?disable_polymer=1"><img src="../../image/common/youtube.png"></a>
+				<a href="https://www.facebook.com/ycpiano/"><img src="../../image/common/facebook.png"></a>
+				<a href="https://www.instagram.com/hdcyc_official/"><img src="../../image/common/instagram.png"></a>
+			</span>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
+
+
+
+

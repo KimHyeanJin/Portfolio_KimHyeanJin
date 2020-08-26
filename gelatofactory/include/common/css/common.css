@@ -1,0 +1,42 @@
+@import url(index.css);
+
+ @font-face{
+    font-family:'NanumBarunGothic';
+	src: url('../../../font/NanumBarunGothic.eot?#iefix') format('embedded-opentype'),
+	url('../../../font/NanumBarunGothic.ttf') format('truetype');
+	font-style: normal;
+	font-weight:normal;
+  }
+ 
+ @font-face{
+    font-family:'NanumPen';
+	src: url('../../../font/NanumPen.eot?#iefix') format('embedded-opentype'),
+	url('../../../font/NanumPen.ttf') format('truetype');
+	font-style: normal;
+	font-weight:normal;
+  }
+  
+ 
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, 
+abbr, address, big, cite, code, del, dfn, em, font, img, ins,q, s, samp, small, strike, 
+strong, sub, sup, tt, var, b,u, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, 
+table, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; border: none 0; }
+html, body { width:100%; height:100%; }
+body { background-color:#fff;}
+body, input, button, textarea,table, td { font-size:12px;  font-family:"NanumGothic", 'Lato', sans-serif, Verdana, "돋움", Dotum, Helvetica, AppleGothic; color:#444;}
+h1, h2, h3, h4, h5, h6 {font-size:12px; text-align:left;}
+img, fieldset, iframe {border:0 none;}
+table, div {border-collapse: collapse;}
+address, caption, cite, code, dfn, em, strong, th, var { font-style : normal; font-weight : normal; }
+ul, li, ol { list-style-type: none;}
+
+legend,  caption { display: none; }
+hr { border-collapse:collapse; display:none; }
+strong{font-weight:bold;}
+
+a{
+	text-decoration: none;
+	outline: none;
+}
+
+

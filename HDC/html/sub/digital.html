@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HDC 영창</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../include/common/css/common.css" type="text/css">
+<script type="text/JavaScript" src="../../include/common/js/jquery-1.7.2.min.js"></script>
+</head>
+<body class="bg">
+<script type="text/JavaScript">
+	$(document).ready(function(){  
+		$(".topnav").hover(function() { //마우스를 topnav에 오버시
+			$("#Sheader").parent().find(".navi_set").slideDown('normal').show(); //subnav가 내려옴.
+			$('.navi_set').parent().hover(function() {  
+			}, function(){  
+				$("#Sheader").parent().find(".navi_set").slideUp('fast'); //subnav에서 마우스 벗어났을 시 원위치시킴  
+			});  
+		}); 
+		
+		$(".navi_set ul li a").hover(function(){
+			$(this).parent().find("img").show();
+			$(this).parent().hover(function() {  
+			}, function(){  
+				$(this).parent().find("img").hide(); 
+			});
+		});
+		
+		$(".topnav a").hover(function(){
+			$(this).parent().find("div").show();
+			$(this).parent().find("div").css({"width":"141px"});
+			$(this).parent().hover(function() {  
+			}, function(){  
+				$(this).parent().find("div").hide(); 
+				$(this).parent().find("div").css({"width":"1px"});
+			});
+		});
+		
+		$("dd:not(:first)").css("display","none");
+		$("dt:first").addClass("selected");
+		$("dl dt").mouseover(function(){
+			$(this).addClass("over");
+		}).mouseout(function(){
+			$(this).removeClass("over");
+		}).click(function(){
+			if($("+dd",this).css("display")=="none"){
+				$("dd").hide();
+				$("+dd",this).show();
+				$("dt").removeClass("selected");
+				$(this).addClass("selected");
+			}
+		});
+		
+		$(function(){
+			$("ul.content li:not("+$(".tab li a.selected").attr("href")+")").hide();
+			$("ul.tab li a").click(function(){
+				$("ul.tab li a").removeClass("selected");
+				$(this).addClass("selected");
+				$("ul.content li").hide();
+				$($(this).attr("href")).fadeIn();
+			});
+		});
+	});  
+</script>
+<div id="Swrap">
+	<div id="Sheader">
+		<div class="navi_set">
+				<ul>
+					<li><a href="ceo.html">CEO</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="value.html">가치체계</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="history.html">주요연혁</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="ci.html">CI</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="location.html">본사위치</a><img src="../../image/common/select.gif" height="12px;"></li>
+				</ul>
+				
+				<ul>
+					<li><a href="digital.html">디지털음향</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="piano.html">피아노</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="#">관현악기</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="#">CMS사업</a><img src="../../image/common/select.gif" height="12px;"></li>
+				</ul>
+				<ul>
+					<li><a href="news.html">뉴스룸</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="#">콩쿠르</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="society.html">사회공헌</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="manage.html">윤리경영</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="subsidiary.html">계열사</a><img src="../../image/common/select.gif" height="12px;"></li>
+				</ul>
+				<ul class="none">
+					<li><a href="#">온라인쇼핑</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="shop.html">직영쇼핑</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="network.html">네트워크</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="#">A/S안내</a><img src="../../image/common/select.gif" height="12px;"></li>
+				</ul>
+			</div>
+		<div id="all">
+			<span class="logo"><a href="../../index.html"><img src="../../image/common/logo.png"></a></span>
+			<div class="nav">
+				<ul>
+					<li class="topnav"><a href="#">회사소개</a><div class="li_line1"></div></li>
+					<li class="topnav"><a href="#">사업분야</a><div class="li_line2"></div></li>
+					<li class="topnav"><a href="#">커뮤니티</a><div class="li_line3"></div></li>
+					<li class="topnav"><a href="#">고객지원</a><div class="li_line4"></div></li>
+				</ul>
+			</div>
+			
+		</div>
+	</div>
+	
+	<div id="Scontents">
+		<div id="subbox">
+			<div class="subMu_2">
+				<ul>
+					<li class="select"><a href="digital.html">디지털음향</a></li>
+					<li>l</li>
+					<li><a href="piano.html">피아노</a></li>
+					<li>l</li>
+					<li><a href="#">관현악기</a></li>
+					<li>l</li>
+					<li><a href="#">CMS사업</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div id="digital">
+			<div class="tags">
+				<div class="tagline"></div>
+				디지털음향
+			</div>
+			<div class="left"><img src="../../image/sub/digital/img01.png"></div>
+			<div class="right">
+				<img src="../../image/sub/digital/title.png">
+				<div class="line02"></div>
+				<div class="txt01">1990년 디지털악기 전문업체<br>
+				미국 커즈와일사를 인수한 후<br>
+				미국 보스턴 R&D센터를<br>
+				운영하고 있습니다.</div>
+			</div>
+			
+			<div class="txt02">또한 세계적인 명성과 경쟁력을 보유한 글로벌 AV 음향기기와 홈레코딩 제품들을 취급하며<br>
+			최고의 로열티를 제공하는 글로벌 디지털 사운드 전문기업의 역량을 넓혀가고 있습니다.</div>
+			
+			<div id="music">
+				<dl>
+					<dt>커즈와일</dt>
+					<dd>
+						<h2>커즈와일<h4>KURZWEIL</h4><span class="tit01">/</span></h2>
+						<p>
+							1983년 유명 맹인 가수 스티비원더를 위해 ‘세계최초의 신디사이저’ K250를 개발한 세계적인 석학 레이몬드 커즈와일 (Raymond Kurzweil) 박사를 통해 커즈와일은 시작합니다. 전설적 명기 K2000 시리즈와 다양한 독자 기술들로 전자음악의 역사이자 교과서로 음향 기술 분야의 ‘그래미상’으로 불리우는 미국 TEC Award를 총 6회 수상, 건반악기 관련 분야 최다 수상기록을 보유하고 있습니다.
+							커즈와일은 전자음악의 역사이자 교과서로 따라올 수 없는 혁신성과 독창성으로 세계 4대 메이저 디지털악기 브랜드로 평가받고 있습니다.
+						</p>
+						<a href="#"><div>커즈와일 글로벌 사이트<img src="../../image/sub/digital/home.gif"></div></a>
+						
+						<h2>커즈와일 TEC Award 올해의 최고기술상 수상기록<span class="tit01">/</span></h2>
+						<div class="tit02">
+							1993 Kurzweil K2000RS Sampler<br>
+							1995 Kurzweil PC-88 Keyboard<br>
+							1996 Kurzweil K2500XS<br>
+							1999 Kurzweil AES (Audio Elite System)<br>
+							2000 Kurzweil K2600<br>
+							2001 Kurzweil PC2X
+						</div>
+						
+						<div id="aboutpiano">
+							<ul class="tab">
+								<li class="menu1"><a href="#menu1" class="selected"><div>디지털피아노<br>Digital Piano</div></a></li>
+								<li class="menu2"><a href="#menu2"><div>스테이지피아노<br>Stage Piano</div></a></li>
+								<li class="menu3"><a href="#menu3"><div>신디사이저<br>Synthesizer</div></a></li>
+							</ul>
+							<ul class="content">
+								<li id="menu1">
+									<div class="muWrap">
+										디지털 피아노
+										<span class="tit03">Digital Piano</span>
+										<div class="txt02">현존하는 디지털피아노 중 최대 수준인 음원 용량과 다이내믹 스테레오 샘플,
+																	새로운 DSP컨트롤로 만들어져 놀랄 만큼 섬세한 늬앙스가 표현되는 피아노 사운드
+																	실제 어쿠스틱 피아노의 무게감과 탄력성, 정교한 타현점 등을 완벽하게 구현하는
+																	고급 건반을 제공하는 커즈와일 디지털피아노는 전세계 가정의 취미 용도부터 
+																	전문 스튜디오 레코딩 작업까지 다양하게 사용되고 있습니다.</div>			
+										<a href="#"><div class="buy">제품 구입하러 가기<img src="../../image/sub/digital/home.gif"></div></a>
+									</div>
+									
+								</li>
+								
+								<li id="menu2">
+									<div class="muWrap">
+										스테이지 피아노
+										<span class="tit03">Stage Piano</span>
+										<div class="txt02">라이브용 건반악기의 대명사이자 ‘스테이지피아노’ 라는 용어를 시작한 커즈와일의 스테디셀러 SP시리즈. 필수적인 기능 위주의 간편한 인터페이스, 세계적 명성의 트리플 –스트라이크 피아노와 새로운 저먼그랜드 피아노 음색으로 가장 합리적이면서 뛰어난 음색의 대표 건반으로 손꼽히고 있습니다. </div>			
+										<a href="#"><div class="buy">제품 구입하러 가기<img src="../../image/sub/digital/home.gif"></div></a>
+									</div>
+								</li>
+								<li id="menu3">
+									<div class="muWrap">
+										신디사이저
+										<span class="tit03">Synthesizer</span>
+										<div class="txt02">현존하는 디지털피아노 중 최대 수준인 음원 용량과 다이내믹 스테레오 샘플, 새로운 DSP컨트롤로 만들어져 놀랄 만큼 섬세한 늬앙스가 표현되는 피아노 사운드 실제 어쿠스틱 피아노의 무게감과 탄력성, 정교한 타현점 등을 완벽하게 구현하는 고급 건반을 제공하는 커즈와일 디지털피아노는 전세계 가정의 취미 용도부터 전문 스튜디오 레코딩 작업까지 다양하게 사용되고 있습니다. </div>			
+										<a href="#"><div class="buy">제품 구입하러 가기<img src="../../image/sub/digital/home.gif"></div></a>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<p class="under"></p>
+					</dd>
+					
+					<dt>스튜디오로직</dt>
+					<dd>
+						<h2>스튜디오로직<h4>STUDIO LOGIC</h4><span class="tit01">/</span></h2>
+						
+						<p>
+							1946년 이탈리아 레카나티 (Recanati) 지역에서 설립된 세계최초의 건반 전문 생산업체 FATAR社에서 개발과 생산하는 Studiologic은 혁신적인 월드클래스
+							디지털 악기들을 선보입니다.<br><br>
+
+							100명의 이태리 현지 엔지니어와 36,000㎡ 규모의 이태리 생산시설을 갖춘 Studio Logic의 모든 Products 는 이탈리아에서 100% 제작됩니다. Studio Logic은 가장 혁신적이고 트렌디한 기술을 가장 먼저 접목하며
+							 유럽에서 가장 사랑 받는 MIDI 컨트롤러와 건반 악기 제조사입니다. 이탈리아의 감성을 담은 디자인과 실용적인 삶과 철학이 담긴 쉽고 편리한 제품들을 이제 HDC 영창을 통해 만나보세요. <br><br>
+							<span class="pd01">PROFESSIONAL STAGE PIANO/
+							MIDI Controllers/
+							Virtual-Analog Synthesizer</span>
+						</p>
+						<a href="#"><div>제품 구입하러 가기<img src="../../image/sub/digital/home.gif"></div></a>
+						<p class="under"></p>
+					</dd>
+					
+					<dt>AV음향</dt>
+					<dd>
+						<h2>젠하이저<h4>SENNHEISER</h4><span class="tit01">/</span></h2>
+						
+						<p>
+							에미(Emmy), 그래미(Grammy), 오스카(Oscar) 등 다수의 수상 경력을 보유한
+							유럽 판매 1위 오디오 전문기업<br><br>
+							독일 하노버 인근의 작은 전원 도시인 베데마르크 위치한 세계적인 오디오 전문 테크놀로지 기업 젠하이저는 1945년 창립된 헤드폰, 마이크, 보청기, 고가의 방송장비 등 프로페셔널 오디오 전문 기업입니다.<br>
+							항공기 1등석에 비치된 헤드폰이나 국가 정상이 사용하는 마이크 중 상당수가 바로젠하이저입니다.
+							지난 70여년간 젠하이저는 오디오 업계에서 ‘최고 수준의 제품’과 같은 뜻으로 여겨질 정도로 강력한 브랜드 파워를 확보했으며 독일의 우수한 공학, 혁신적인 기술력으로 오디오 매니아들을 만족시키며
+							세계 이어폰/헤드폰 시장을 선도하고 있습니다.
+						</p>
+						<a href="#"><div>제품 구입하러 가기<img src="../../image/sub/digital/home.gif"></div></a>
+						<h2>루악오디오<h4>RUARKAUDIO</h4><span class="tit01">/</span></h2>
+						<p>
+							30년이 넘게 세계적인 하이엔드 스피커를 제작해 온 영국의 루악오디오는 제품의 디자인과 사운드에 남다른 열정을 쏟아 왔습니다.<br>
+							항상 가슴으로 느낄 수 있는 제품을 디자인하는 것이 목표인 루악오디오는 사무실, 거실, 침실 등 당신이 머무르는 모든 공간에 완벽하게 형성된 음악 시스템을 선사해 드릴 것 입니다.<br><br>
+							<span class="pd02">블루투스 FM라디오/
+							Smart Streaming 라디오/
+							Ultimate Streaming Musicbox</span>
+						</p>
+						<a href="#"><div>제품 구입하러 가기<img src="../../image/sub/digital/home.gif"></div></a>
+						<h2>레보<h4>REVO</h4><span class="tit01">/</span></h2>
+						<p>
+							30년이 넘게 세계적인 하이엔드 스피커를 제작해 온 영국의 루악오디오는 제품의 디자인과 사운드에 남다른 열정을 쏟아 왔습니다.<br>
+							항상 가슴으로 느낄 수 있는 제품을 디자인하는 것이 목표인 루악오디오는 사무실, 거실, 침실 등 당신이 머무르는 모든 공간에 완벽하게 형성된 음악 시스템을 선사해 드릴 것 입니다.<br><br>
+							<span class="pd03">블루투스 스피커/
+							Streaming 뮤직시스템/
+							Integrated 뮤직시스템/
+							High fidelity radiogram</span>
+						</p>
+						<p class="under"></p>
+					</dd>
+					
+					<dt>홈레코딩</dt>
+					<dd>
+						<h2>아이콘<h4>ICON</h4><span class="tit01">/</span></h2>
+						
+						<p>
+							최고의 성능과 합리적인 가격으로 미디 장비의 모든 것을 취급하는 글로벌 오디오 전문기업<br><br>
+
+							아이콘 ICON 은 프로 오디오와 관련된 모든 것을 제공합니다. 미디 키보드 부터 인터페이스류, 콘트롤 서페이스, 마이크와 헤드폰까지 모든 프로페셔널 환경에서 최적의 성능을 구현하는 ICON의 추수한 기어들을 HDC 영창에서 만날 수 있습니다.<br>
+							그레미 수상경력의 ‘Aaron Freedom Lyles’ 와 그레미 노미네이트 프로듀서 ‘The Elevaterz’ , ‘Javier Delgado’ , ‘Steve Lamm’ 등 세계최고의 뮤지션과 ‘DJ Klypso’ 등 최고의 DJ와 아티스트들이 사용하는 아이콘 ICON 은 가장 창조적이고 파워풀한 프로 오디오 장비의 가장 트렌디한 선두주자로 꼽힙니다. 
+							 <br><br>
+							<span class="pd04">
+								IDI Keyboards/
+								Control Surfaces/
+								Interfaces/
+								Headphones & Microphones/
+								Monitor Speakers
+							</span>
+						</p>
+						<a href="#"><div>제품 구입하러 가기<img src="../../image/sub/digital/home.gif"></div></a>
+						<p class="under"></p>
+					</dd>
+				</dl>
+			</div>
+		</div>
+		
+		<div class="line"></div>
+	</div>
+	
+	<div id="Sfooter">
+		<span class="fbg"><img src="../../image/common/fbg.png"></span>
+		<div id="fbox">
+			<span class="left">
+				<a href="#"><img src="../../image/common/flogo.png"></a><br>
+				<a href="#">이메일 무단수집거부</a>│<a href="#">사이트맵</a><br>
+				22840 인천광역시 서구 봉수대로 196<br>
+				COPYRIGHT@HDCYOUNGCHANG COMPANY.ALL RIGHT RESERVED.
+			</span>
+			<span class="right">
+				<a href="https://blog.naver.com/hdc-youngchang"><img src="../../image/common/blog.png"></a>
+				<a href="https://www.youtube.com/user/yckurzweil/featured?disable_polymer=1"><img src="../../image/common/youtube.png"></a>
+				<a href="https://www.facebook.com/ycpiano/"><img src="../../image/common/facebook.png"></a>
+				<a href="https://www.instagram.com/hdcyc_official/"><img src="../../image/common/instagram.png"></a>
+			</span>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
+
+
+
+

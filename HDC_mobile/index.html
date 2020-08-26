@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HDC영창 반응형</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/reset.css" />
+	<script type="text/JavaScript" src="js/jquery-1.7.2.min.js"></script>
+</head>
+<body>
+<script type="text/JavaScript">
+	$(document).ready(function(){  
+		$("dd").css("display","none");
+		$("dl dt").mouseover(function(){
+			$(this).addClass("over");
+		}).mouseout(function(){
+			$(this).removeClass("over");
+		}).click(function(){
+			if($("+dd",this).css("display")=="none"){
+				$("dd").hide();
+				$("+dd",this).show();
+				$("dt").removeClass("selected");
+				$(this).addClass("selected");
+			}
+			else{
+				$("dd").hide();
+				$("dt").removeClass("selected");
+			}
+		});
+		$("header img").click(function(){
+			if($("dl").css("display")=="none"){
+				$("dl").show();
+			}
+			else{
+				$("dl").hide();
+			}
+		});
+	});
+</script>
+	<div id="wrap">
+		<header>
+			<img src="image/button.png" class="menu_button">
+			<h1><a href="#"><img src="image/logo1.png"></a></h1>
+		</header>
+		<aside>
+			<dl>
+				<dt>회사소개</dt>
+					<dd>
+						<ul>
+							<a href="#"><li>CEO</li></a>
+							<a href="#"><li>가치체계</li></a>
+							<a href="#"><li>주요연혁</li></a>
+							<a href="#"><li>CI</li></a>
+							<a href="#"><li>본사위치</li></a>
+						</ul>
+					</dd>
+				<dt>사업분야</dt>
+					<dd>
+						<ul>
+							<a href="#"><li>디지털음향</li></a>
+							<a href="#"><li>피아노</li></a>
+							<a href="#"><li>관현악기</li></a>
+							<a href="#"><li>CMS사업</li></a>
+						</ul>
+					</dd>
+				<dt>커뮤니티</dt>
+					<dd>
+						<ul>
+							<a href="#"><li>뉴스룸</li></a>
+							<a href="#"><li>콩쿠르</li></a>
+							<a href="#"><li>사회공헌</li></a>
+							<a href="#"><li>윤리경영</li></a>
+							<a href="#"><li>계열사</li></a>
+						</ul>
+					</dd>
+				<dt>고객지원</dt>
+					<dd>
+						<ul>
+							<a href="#"><li>온라인쇼핑</li></a>
+							<a href="#"><li>직영쇼핑</li></a>
+							<a href="#"><li>네트워크</li></a>
+							<a href="#"><li>A/S안내</li></a>
+						</ul>
+					</dd>
+			</dl>
+		</aside>
+		
+		<section>
+			<div class="main_image">
+				<img src="image/main_image.png" class="main_img1">
+			</div>
+			<div class="news">
+				<ul>
+					<li><a href="#">HDC 영창 커즈와일 USB 마이크...</a><h4>2020.02.04.</h4></li>
+					<li><a href="#">‘Beyond the KURZWEIL’, HDC...</a><h4>2020.02.04.</h4></li>
+					<li><a href="#">제 7회 HDC 영창 콩쿠르 성황리...</a><h4>2020.10.02.</h4></li>
+				</ul>
+			</div>
+			<div class="contents_box">
+				<div class="contents">
+					<a href="#"><div>
+						<img src="image/img01.jpg">
+						<h2>디지털 음향</h2>
+						<h3>글로벌 디지털 사운드 전문기업</h3>
+						<div class="black"></div>
+					</div></a>
+					<a href="#"><div>
+						<img src="image/img02.jpg">
+						<h2>어쿠스틱 피아노</h2>
+						<h3>변치 않는 아름다운 소리</h3>
+						<div class="black"></div>
+					</div></a>
+					<a href="#"><div>
+						<img src="image/img03.jpg">
+						<h2>관현악기</h2>
+						<h3>우수한 디자인과 편안하고<br>매력적인 사운드</h3>
+						<div class="black"></div>
+					</div></a>
+					<a href="#"><div>
+						<img src="image/img04.jpg">
+						<h2>CMS사업</h2>
+						<h3>차별화된 소재와 쾌적한 삶에 대한 <br>끊임없는 연구</h3>
+						<div class="black"></div>
+					</div></a>
+				</div>
+				<div class="banner">
+					<img src="image/banner_background.png" class="banner_background">
+					<div class="inner_banner">
+						<img src="image/logo2.png" class="banner_logo">
+						<h2>쇼핑몰</h2>
+						<img src="image/piano.png" class="piano">
+						<h3>제품정보 및 행사 소식, 전국매장<br>찾기 다운로드 및 고객지원</h3>
+						<a href="#"><div class="more">자세히 보기<strong>></strong></div></a>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<footer>
+			<img src="image/logo3.png" class="footer_logo">
+			<div class="sns">
+				<a href="#"><img src="image/blog.png"></a>
+				<a href="#"><img src="image/youtube.png"></a>
+				<a href="#"><img src="image/facebook.png"></a>
+				<a href="#"><img src="image/instagram.png"></a>
+			</div>
+			<h3>
+				이메일 무단수집거부│사이트맵<br>
+				22840 인천광역시 서구 봉수대로 196<br>
+				<strong>COPYRIGHT@HDCYOUNGCHANG COMPANY.ALL RIGHT RESERVED.</strong>
+			</h3>
+		</footer>
+	</div>
+
+</body>
+</html>

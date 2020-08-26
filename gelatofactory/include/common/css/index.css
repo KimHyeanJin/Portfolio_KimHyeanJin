@@ -1,0 +1,100 @@
+@charset "utf-8";
+#fullpage{position:relative; width:1900px; height:100%; margin:0 auto;}
+/*section0*/
+#section0{position:relative; width:1900px;}
+#icecream_melt{position:absolute; top:0; height:100%;}
+#section0 .icecream{position:absolute; top:0; left:270px;}
+#section0 .logo_deco{position:absolute; top:170px; left:832px;}
+#section0 .logo{position:absolute; top:280px; left:423px;}
+
+/*section1*/
+#section1{clear:both; position:relative; width:1900px; height:100%; margin:0 auto;}
+#section1 .liquid1{position:absolute; top:0; left:740px; height:100%;}
+#section1 .liquid_background{position:absolute; width:568px; height:100%; background-color:#94c6ff; top:0; right:0;}
+#section1 .leaves1{position:absolute; top:145px; left:910px;}
+#section1 .pedi2{position:absolute; right:370px; top:15px;}
+#section1 .pedi3{position:absolute; right:630px; top:260px;}
+#section1 .leaves2{position:absolute; bottom:0; right:295px;}
+#section1 .pedi1	{position:absolute; right:365px; bottom:45px;}
+
+#section1 .dot1{position:absolute; left:481px; top:133px;}
+#section1 .dot2{position:absolute; left:592px; top:133px;}
+#section1 .dot3{position:absolute; left:700px; top:133px;}
+#section1 h1{position:absolute; left:442px; top:166px;}
+#section1 h2{font-family:NanumBarunGothic; font-size:40px; color:#001688; font-weight:100; position:absolute; left:442px; top:500px;}
+.box1{padding:6px 0 6px 6px; width:449px; height:38px; background-color:#001688; position:absolute; left:440px; top:544px; font-family:NanumBarunGothic; font-size:40px; color:#fff; font-weight:100;}
+.box2{width:293px; height:78px; background-color:#001688; position:absolute; left:440px; top:730px;}
+.box2 .boxline{border:2px solid #fff; width:277px; height:62px; font-family:"NanumBarunGothic"; font-size:28px; color:#fff; font-weight:100; position:absolute; top:6px; left:6px; text-align:center; line-height:66px; letter-spacing:5px;}
+
+/*section2*/
+#section2{clear:both; position:relative; width:1900px; height:100%; margin:0 auto;}
+#section2 .liquid2{position:absolute; top:0; left:0; height:100%; width:100%; margin:0 auto;}
+#section2 .hand1{position:absolute; bottom:0; left:285px;}
+
+#section2 h1{position:absolute; right:442px; top:166px;}
+#section2 h2{font-family:NanumBarunGothic; color:#300; font-size:30px; font-weight:300; position:absolute; right:442px; top:375px; text-align:right;}
+#section2 h2 strong{font-size:40px; color:#300; font-weight:900;}
+#section2 h2 strong .number{font-size:50px;}
+#section2 h2 .box3{display:inline; color:#fff; background-color:#e25e4d; font-size:40px; padding:5px;}
+
+#section2 h3{font-family:NanumPen; color:#911709; font-size:40px; font-weight:300; position:absolute; right:442px; top:540px; text-align:right;}
+#section2 .box2{background-color:#e25e4d; left:1168px;}
+
+
+/*section3*/
+#section3{clear:both; position:relative; height:100%; width:1900px; margin:0 auto;}
+
+.slide_bg{position:relative; width:1900px; height:1000px;}
+
+	/*slide1*/
+#slide1 .dots1{position:absolute; top:332px; left:854px;}
+#slide1 .dots2{position:absolute; top:127px; right:546px;}
+#slide1 .diamond{position:absolute; top:35px; right:364px;}
+#slide1 .hand2{position:relative; padding-top:120px; padding-left:980px; z-index:10;}
+.gradient1{position:absolute; width:408px; height:80px; top:206px; left:508px; background:url(../../../image/gradient1.png) no-repeat; padding:3px 0 0 25px; font-family:"NanumBarunGothic"; font-size:70px; color:#fff; letter-spacing:12px;}
+.gradient2{position:absolute; width:204px; height:80px; top:296px; left:508px; background:url(../../../image/gradient2.png) no-repeat; padding:3px 0 0 25px; font-family:"NanumBarunGothic"; font-size:70px; color:#fff; letter-spacing:12px;}
+.slide ul{position:absolute; top:440px; left:508px;}
+ul.txt li{font-family:NanumPen; color:#666; font-size:40px; height:60px; background:url(../../../image/check1.png) no-repeat; line-height:58px;}
+ul.txt li div{width:26px; height:26px; float:left; border:1px solid #93f; margin:15px 15px 0 8px;}
+#section3 .box2{left:508px;}
+#slide1 .box2{background-color:#96f;}
+
+	/*slide2*/
+#slide2 .flower2{position:absolute; top:0; right:598px;}
+#slide2 .hand3{position:absolute; top:0; right:310px;}
+#slide2 .flower1{position:absolute; top:0; right:60px;}
+#slide2 .gradient1{background:url(../../../image/gradient3.png) no-repeat;}
+#slide2 .gradient2{background:url(../../../image/gradient4.png) no-repeat;}
+#slide2 ul.txt li{background:url(../../../image/check2.png) no-repeat;}
+#slide2 ul.txt li div{border:1px solid #903;}
+#slide2 .box2{background-color:#ef309d;}
+
+	/*slide3*/
+#slide3 .deco1{position:absolute; top:0; right:58px;}
+#slide3 .deco2{position:absolute; bottom:684px; right:68px;}
+#slide3 .deco3{position:absolute; top:50px; right:150px;}
+#slide3 .stars{position:absolute; bottom:0; right:333px;}
+#slide3 .hand4{position:absolute; bottom:0; right:365px;}
+#slide3 .gradient1{background:url(../../../image/gradient5.png) no-repeat;}
+#slide3 .gradient2{background:url(../../../image/gradient6.png) no-repeat; width:293px;}
+#slide3 ul.txt li{background:url(../../../image/check3.png) no-repeat;}
+#slide3 ul.txt li div{border:1px solid #960;}
+#slide3 .box2{background-color:#fc3;}
+
+/*section4*/
+#section4{clear:both; position:relative; height:100%; width:1900px; margin:0 auto;}
+#section4 .bg_4{position:relative; width:1900px; height:100%; background-color:#ff8f9f; text-align:center;}
+#section4 .gradient3{position:absolute; height:100%; width:100%; bottom:0; right:0; margin:0 auto; z-index:2;}
+#section4 .logo_small{position:relative; width:238px; z-index:3; margin-top:100px;}
+#section4 ul{position:relative; width:940px; margin:0 auto; z-index:5; margin-top:60px;}
+#section4 ul li{width:380px; position:relative; text-align:center; font-family:"NanumBarunGothic"; font-size:30px; color:#fff;}
+#section4 ul li.left{float:left;}
+#section4 ul li.right{float:right;}
+#section4 ul li div{position:relative; width:10px; height:10px; background-color:#fff; transform: rotate(-45deg); margin:0 auto; margin-top:40px; margin-bottom:40px;}
+#section4 .sns{clear:both; position:relative; width:760px; margin:0 auto; z-index:6; padding-top:65px;}
+#section4 .sns .line{width:315px; height:2px; background-color:#fff; float:left; margin-top:24px;}
+#section4 .sns h3{font-family:"NanumBarunGothic"; font-size:48px; color:#fff; display:inline; float:left; margin:0 18px;}
+#section4 .banner{clear:both; position:relative; width:588px; z-index:7; margin:0 auto; padding-top:57px;}
+#section4 .banner a.banner_left{float:left;}
+#section4 .banner a.banner_right{float:right;}
+#section4 ul li h2{font-family:"NanumBarunGothic"; font-size:70px; color:#fff; display:inline;}

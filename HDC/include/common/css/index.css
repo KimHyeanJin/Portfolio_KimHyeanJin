@@ -1,0 +1,100 @@
+@charset "utf-8";
+
+#wrap{position:relative; width:100%;}
+#header{position:relative; background:url(../../../image/main/bg.jpg) no-repeat; width:1920px; height:900px; margin:0 auto; padding-bottom:46px;}
+#contents{position:relative; width:1920px; margin:0 auto; background-color:#fff; overflow:hidden; padding-bottom:140px;}
+#footer{margin:0 auto; background:url(../../../image/main/fbg.jpg) no-repeat; width:1920px; height:166px;}
+#header .logo{position:absolute; top:54px; left:812px;}
+
+#header .nav{position:absolute; height:60px; width:100%;}
+#header .nav ul{width:1200px; margin:0 auto; padding:0;}
+#header .nav li{width:300px; line-height:60px; float:left; text-align:center; padding-top:149px; font-family:"NanumSquareRoundEB"; font-size:20px; letter-spacing:1px;}
+
+#header .nav li a.mu1{color:#fff;}
+#header .nav li a.mu2{color:#fff;}
+#header .nav li a.mu3{color:#fff;}
+#header .nav li a.mu4{color:#fff;}
+
+#header .nav li a.mu1 div{width:113px; height:2px; background-color:#f33; position:relative; z-index:200; margin-left:92px; display:none;}
+#header .nav li a.mu2 div{width:113px; height:2px; background-color:#f33; position:relative; z-index:200; margin-left:92px; display:none;}
+#header .nav li a.mu3 div{width:113px; height:2px; background-color:#f33; position:relative; z-index:200; margin-left:92px; display:none;}
+#header .nav li a.mu4 div{width:113px; height:2px; background-color:#f33; position:relative; z-index:200; margin-left:92px; display:none;}
+
+.line01{position:absolute; top:209px; width:100%; border-top:1px solid #666; z-index:400;}
+
+.play{position:absolute; background:url(../../../image/main/play.png) no-repeat; width:159px; height:48px; line-height:48px; top:750px; left:474px; color:#fff; font-family:"NanumSquareRoundR"; font-size:16px; z-index:100; padding-left:60px; color:#fff;}
+
+#upCon{position:relative; width:1128px; height:620px; margin:0 auto; text-align:justify; padding-bottom:39px;}
+
+#upCon .Box1 a{position:relative; background-color:#67b1ee; float:left; width:262px; height:532px; margin-right:39px;}
+#upCon .Box1 a:hover{position:relative; background-color:#08c; float:left; width:262px; height:532px; margin-right:39px;}
+
+#upCon .Box2 a{position:relative; background-color:#f66; float:left; width:262px; height:532px; margin-right:39px;}
+#upCon .Box2 a:hover{position:relative; background-color:#f33; float:left; width:262px; height:532px; margin-right:39px;}
+
+#upCon .Box3 a{position:relative; background-color:#515560; float:left; width:262px; height:532px;}
+#upCon .Box3 a:hover{position:relative; background-color:#333; float:left; width:262px; height:532px;}
+
+
+#upCon .line01{border-top:1px solid #fff; width:167px; margin:44px; left:95px; top:150px; z-index:400; position:absolute;}
+#upCon .line02{border-top:1px solid #fff; width:167px; margin:44px; right:390px; top:150px; z-index:400; position:absolute;}
+#upCon .line03{border-top:1px solid #fff; width:167px; margin:44px; right:0; top:150px; z-index:400; position:absolute;}
+#upCon a{position:absolute; padding:44px;}
+#upCon a .txt01{font-family:"NanumBarunGothicBold"; font-size:30px; color:#fff; height:142px;}
+#upCon a span.txt02{display:block; font-family:"NanumSquareRoundR"; font-size:16px; color:#fff; line-height:20px; padding:60px 0; }
+#upCon span.date{position:absolute; font-family:"NanumSquareRoundR"; font-size:16px; color:#fff; padding:44px; width:151px; right:0; bottom:0;}
+
+#downCon{clear:both; position:relative; width:1131px; height:264px; margin:0 auto; padding-bottom:128px;}
+#downCon .newBox{position:relative; float:left; width:264px; height:264px; margin-right:25px;}
+#downCon .newBox img{position:absolute; display:block;}
+#downCon .newBox span{position:absolute;}
+#downCon .newBox span.txt03{font-family:"NanumBarunGothicBold"; font-size:24px; color:#515560; top:37px; left:26px;}
+#downCon .newBox span.txt04{font-family:"NanumSquareRoundR"; font-size:15px; color:#515560; top:70px; left:26px; line-height:17px;}
+#downCon .newBox a div{position:absolute; top:5px; width:264px; height:264px;}
+#downCon .newBox a:hover div{position:absolute; top:5px; background:url(../../../image/main/shadow2.png) no-repeat;}
+
+#downCon .noBox{position:relative; float:left; width:264px; height:264px;}
+#downCon .noBox img{position:absolute; display:block;}
+#downCon .noBox span{position:absolute;}
+#downCon .noBox span.txt03{font-family:"NanumBarunGothicBold"; font-size:24px; color:#515560; top:37px; left:26px;}
+#downCon .noBox span.txt04{font-family:"NanumSquareRoundR"; font-size:15px; color:#515560; top:70px; left:26px; line-height:17px;}
+#downCon .noBox a div{position:absolute; top:5px; width:264px; height:264px;}
+#downCon .noBox a:hover div{position:absolute; top:5px; background:url(../../../image/main/shadow2.png) no-repeat;}
+
+
+#banner{text-align:center; position:relative; background:url(../../../image/main/banner_bg.jpg) no-repeat; width:1920px; height:300px; margin:0 auto; border-top:1px solid #666; border-bottom:1px solid #666;}
+#banner a{font-family:"NanumBarunGothicBold"; font-size:30px; color:#515560;}
+#banner a img{display:block; margin:0 auto; padding:77px 0 30px 0;}
+#banner a span{font-family:"NanumSquareRoundR"; font-size:24px; display:block; margin:0 auto; margin-top:36px;}
+
+#fbox{width:1136px; height:166px; margin:0 auto; font-family:"NanumSquareRoundR"; font-size:16px; color:#fff;}
+#fbox .left{float:left; line-height:18px; position:relative; top:40px;}
+#fbox .left a{font-family:"NanumSquareRoundR"; font-size:16px; color:#fff;}
+#fbox .left a img{padding-bottom:14px;}
+
+#fbox .right{float:right;}
+#fbox .right a img{margin-right:14px; position:relative; top:60px;}
+
+ul#topnav li span {
+	float: left;
+	padding:10px 0;
+	position: absolute;
+	left:360px; top:210px;
+	display: none;
+	width: 1200px;
+	background: #fff;
+	
+	-moz-border-radius-bottomright: 5px;
+	-khtml-border-radius-bottomright: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	-khtml-border-radius-bottomleft: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+}
+ul#topnav li:hover span {}
+ul#topnav li span a{font-family:"NanumSquareRoundR"; font-size:18px; color:#515560; margin:0 60px;}
+ul#topnav li span a:hover {color:#f33;}
+
+
+
+

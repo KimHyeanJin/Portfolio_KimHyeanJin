@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HDC 영창</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../include/common/css/common.css" type="text/css">
+<script type="text/JavaScript" src="../../include/common/js/jquery-1.7.2.min.js"></script>
+
+</head>
+<body class="bg">
+<script type="text/JavaScript">
+	$(document).ready(function(){  
+		$(".topnav").hover(function() { //마우스를 topnav에 오버시
+			$("#Sheader").parent().find(".navi_set").slideDown('normal').show(); //subnav가 내려옴.
+			$('.navi_set').parent().hover(function() {  
+			}, function(){  
+				$("#Sheader").parent().find(".navi_set").slideUp('fast'); //subnav에서 마우스 벗어났을 시 원위치시킴  
+			});  
+		}); 
+		
+		$(".navi_set ul li a").hover(function(){
+			$(this).parent().find("img").show();
+			$(this).parent().hover(function() {  
+			}, function(){  
+				$(this).parent().find("img").hide(); 
+			});
+		});
+		
+		$(".topnav a").hover(function(){
+			$(this).parent().find("div").show();
+			$(this).parent().find("div").css({"width":"141px"});
+			$(this).parent().hover(function() {  
+			}, function(){  
+				$(this).parent().find("div").hide(); 
+				$(this).parent().find("div").css({"width":"1px"});
+			});
+		});
+	});  
+</script>
+
+<div id="Swrap">
+	<div id="Sheader">
+		<div class="navi_set">
+				<ul>
+					<li><a href="ceo.html">CEO</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="value.html">가치체계</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="history.html">주요연혁</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="ci.html">CI</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="location.html">본사위치</a><img src="../../image/common/select.gif" height="12px;"></li>
+				</ul>
+				
+				<ul>
+					<li><a href="digital.html">디지털음향</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="piano.html">피아노</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="#">관현악기</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="#">CMS사업</a><img src="../../image/common/select.gif" height="12px;"></li>
+				</ul>
+				<ul>
+					<li><a href="news.html">뉴스룸</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="#">콩쿠르</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="society.html">사회공헌</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="manage.html">윤리경영</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="subsidiary.html">계열사</a><img src="../../image/common/select.gif" height="12px;"></li>
+				</ul>
+				<ul class="none">
+					<li><a href="#">온라인쇼핑</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="shop.html">직영쇼핑</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="network.html">네트워크</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="#">A/S안내</a><img src="../../image/common/select.gif" height="12px;"></li>
+				</ul>
+			</div>
+		<div id="all">
+			<span class="logo"><a href="../../index.html"><img src="../../image/common/logo.png"></a></span>
+			<div class="nav">
+				<ul>
+					<li class="topnav"><a href="#">회사소개</a><div class="li_line1"></div></li>
+					<li class="topnav"><a href="#">사업분야</a><div class="li_line2"></div></li>
+					<li class="topnav"><a href="#">커뮤니티</a><div class="li_line3"></div></li>
+					<li class="topnav"><a href="#">고객지원</a><div class="li_line4"></div></li>
+				</ul>
+			</div>
+			
+		</div>
+	</div>
+
+	
+	<div id="Scontents">
+		<div id="subbox">
+			<div class="subMu">
+				<ul>
+					<li><a href="ceo.html">CEO</a></li>
+					<li>l</li>
+					<li><a href="value.html">가치체계</a></li>
+					<li>l</li>
+					<li><a href="history.html">주요연혁</a></li>
+					<li>l</li>
+					<li class="select"><a href="ci.html">CI</a></li>
+					<li>l</li>
+					<li><a href="location.html">본사위치</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div id="ci">
+			<div class="tags">
+				<div class="tagline"></div>
+				CEO
+			</div>
+			<div class="contentwrap">
+				<img src="../../image/sub/value/hdc.png"><br>
+				HDC의 CI는 기하학적인 뼈대를 바탕으로 직선과 곡선,<br>
+				비움과 채움, 부드러움과 긴장감의 조화를 상징합니다.<br>
+				/
+				<div class="wrap">
+					<a href="http://www.hdc-youngchang.com/file/company/CI.zip"><div class="left">JPG다운받기<img src="../../image/sub/value/d_icon.gif"></div></a>
+					<a href="http://www.hdc-youngchang.com/file/company/CI_ai.zip"><div class="right">AI다운받기<img src="../../image/sub/value/d_icon.gif"></div></a>
+				</div>
+			</div>
+			
+			<div class="iconwrap">
+				<img src="../../image/sub/ci/icon01.png">
+				<h2>공간에 대한 전문성</h2>
+				<h4>삶의 공간과 기반을 만드는 기업으로서<br>전문성과 통찰을 지닌 HDC를 상징합니다.</h4>
+				<img src="../../image/sub/ci/icon02.png">
+				<h2>유연한 혁신</h2>
+				<h4>변화와 확장이 가능한 디자인 시스템으로<br>창조적, 혁신적 기업문화를 상징합니다.</h4>
+				<img src="../../image/sub/ci/icon03.png">
+				<h2>단단한 신뢰</h2>
+				<h4>명료함과 담백함을 기본 원칙으로 신뢰할<br>수 있는 선두기업의 이미지를 표현합니다.</h4>
+			</div>
+		</div>
+		
+		<div id="logotype_bg">
+			<div class="logotype">
+				<div class="tags">
+					<div class="tagline"></div>
+					로고타입
+				</div>
+					
+				<div class="logobox">
+					<span>국문 로고타입</span>
+					<table>
+					<colgroup><col width="50%"><col width="50%"></colgroup>
+						<tr>
+							<th><img src="../../image/sub/ci/logo01.png"></th>
+							<th><img src="../../image/sub/ci/logo02.png"></th>
+						</tr>
+					</table>
+					<span>영문 로고타입</span>
+					<table>
+					<colgroup><col width="50%"><col width="50%"></colgroup>
+						<tr>
+							<th><img src="../../image/sub/ci/logo03.png"></th>
+							<th><img src="../../image/sub/ci/logo04.png"></th>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+		
+		<div id="color">
+			<div class="tags">
+				<div class="tagline"></div>
+				컬러
+			</div>
+			
+			<table>
+				<colgroup><col width="50%"><col width="50%"></colgroup>
+				<tr>
+					<th colspan="2" class="tit01">Primary Color</th>
+				</tr>
+				<tr>
+					<th class="grey"><div>R:220 G:220 B:221</div>HDC GREY</th>
+					<th class="blue"><div>R:174 G:190 B:204</div>HDC BLUE</th>
+				</tr>
+				<tr>
+					<th colspan="2" class="tit01">Secondary Color</th>
+				</tr>
+				<tr>
+					<th class="white"><div>R:254 G:254 B:254</div>HDC WHITE</th>
+					<th class="black"><div>R:86 G:88 B:95</div>HDC BLACK</th>
+				</tr>
+				<tr>
+					<th colspan="2" class="tit01">Identity Color</th>
+				</tr>
+				<tr>
+					<th class="red"><div>R:230 G:36 B:15</div>HDC RED</th>
+					<th class="white"><div>R:254 G:254 B:254</div>HDC WHITE</th>
+				</tr>
+			</table>
+			
+			<div class="txt">HDC 두가지 핵심 컬러는 HDC Blue와 HDC Grey를 기본으로 합니다.<br>
+					프로모션 목적에 맞게 활용 가능한 확장 컬러를 사용하여 다양한 디자인 상황에 대응할 수 있습니다.</div>
+		</div>
+		<div class="line"></div>
+	</div>
+	
+	<div id="Sfooter">
+		<span class="fbg"><img src="../../image/common/fbg.png"></span>
+		<div id="fbox">
+			<span class="left">
+				<a href="#"><img src="../../image/common/flogo.png"></a><br>
+				<a href="#">이메일 무단수집거부</a>│<a href="#">사이트맵</a><br>
+				22840 인천광역시 서구 봉수대로 196<br>
+				COPYRIGHT@HDCYOUNGCHANG COMPANY.ALL RIGHT RESERVED.
+			</span>
+			<span class="right">
+				<a href="https://blog.naver.com/hdc-youngchang"><img src="../../image/common/blog.png"></a>
+				<a href="https://www.youtube.com/user/yckurzweil/featured?disable_polymer=1"><img src="../../image/common/youtube.png"></a>
+				<a href="https://www.facebook.com/ycpiano/"><img src="../../image/common/facebook.png"></a>
+				<a href="https://www.instagram.com/hdcyc_official/"><img src="../../image/common/instagram.png"></a>
+			</span>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
+
+
+
+

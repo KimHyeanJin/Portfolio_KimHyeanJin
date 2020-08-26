@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HDC 영창</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../include/common/css/common.css" type="text/css">
+<script type="text/JavaScript" src="../../include/common/js/jquery-1.7.2.min.js"></script>
+</head>
+<body class="bg">
+<script type="text/JavaScript">
+	$(document).ready(function(){  
+		$(".topnav").hover(function() { //마우스를 topnav에 오버시
+			$("#Sheader").parent().find(".navi_set").slideDown('normal').show(); //subnav가 내려옴.
+			$('.navi_set').parent().hover(function() {  
+			}, function(){  
+				$("#Sheader").parent().find(".navi_set").slideUp('fast'); //subnav에서 마우스 벗어났을 시 원위치시킴  
+			});  
+		}); 
+		
+		$(".navi_set ul li a").hover(function(){
+			$(this).parent().find("img").show();
+			$(this).parent().hover(function() {  
+			}, function(){  
+				$(this).parent().find("img").hide(); 
+			});
+		});
+		
+		$(".topnav a").hover(function(){
+			$(this).parent().find("div").show();
+			$(this).parent().find("div").css({"width":"141px"});
+			$(this).parent().hover(function() {  
+			}, function(){  
+				$(this).parent().find("div").hide(); 
+				$(this).parent().find("div").css({"width":"1px"});
+			});
+		});
+		
+		$(function(){
+			$("ul.content li:not("+$(".tab li a.selected").attr("href")+")").hide();
+			$("ul.tab li a").click(function(){
+				$("ul.tab li a").removeClass("selected");
+				$(this).addClass("selected");
+				$("ul.content li").hide();
+				$($(this).attr("href")).fadeIn();
+			});
+		});
+	});  
+</script>
+
+<div id="Swrap">
+	<div id="Sheader">
+		<div class="navi_set">
+				<ul>
+					<li><a href="ceo.html">CEO</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="value.html">가치체계</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="history.html">주요연혁</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="ci.html">CI</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="location.html">본사위치</a><img src="../../image/common/select.gif" height="12px;"></li>
+				</ul>
+				
+				<ul>
+					<li><a href="digital.html">디지털음향</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="piano.html">피아노</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="#">관현악기</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="#">CMS사업</a><img src="../../image/common/select.gif" height="12px;"></li>
+				</ul>
+				<ul>
+					<li><a href="news.html">뉴스룸</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="#">콩쿠르</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="society.html">사회공헌</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="manage.html">윤리경영</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="subsidiary.html">계열사</a><img src="../../image/common/select.gif" height="12px;"></li>
+				</ul>
+				<ul class="none">
+					<li><a href="#">온라인쇼핑</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="shop.html">직영쇼핑</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="network.html">네트워크</a><img src="../../image/common/select.gif" height="12px;"></li>
+					<li><a href="#">A/S안내</a><img src="../../image/common/select.gif" height="12px;"></li>
+				</ul>
+			</div>
+		<div id="all">
+			<span class="logo"><a href="../../index.html"><img src="../../image/common/logo.png"></a></span>
+			<div class="nav">
+				<ul>
+					<li class="topnav"><a href="#">회사소개</a><div class="li_line1"></div></li>
+					<li class="topnav"><a href="#">사업분야</a><div class="li_line2"></div></li>
+					<li class="topnav"><a href="#">커뮤니티</a><div class="li_line3"></div></li>
+					<li class="topnav"><a href="#">고객지원</a><div class="li_line4"></div></li>
+				</ul>
+			</div>
+			
+		</div>
+	</div>
+	
+	<div id="Scontents">
+		<div id="subbox">
+			<div class="subMu_2">
+				<ul>
+					<li><a href="#">온라인쇼핑</a></li>
+					<li>l</li>
+					<li><a href="shop.html">직영쇼핑</a></li>
+					<li>l</li>
+					<li class="select"><a href="network.html">네트워크</a></li>
+					<li>l</li>
+					<li><a href="#">A/S안내</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div id="network">
+			<div class="tags">
+				<div class="tagline"></div>
+				네트워크
+			</div>
+			
+			<table>
+				<colgroup><col width="30%"><col width="40%"><col width="30%"></colgroup>
+				<tr>
+					<td><img src="../../image/sub/network/kurzweil.png"></td>
+					<td>커즈와일 글로벌 사이트</td>
+					<td><a href="#"><img src="../../image/sub/location/home02.gif"></a></td>
+				</tr>
+				<tr>
+					<td><img src="../../image/sub/network/kurzweil.png"><br><img src="../../image/sub/network/youtube.png"></td>
+					<td>커즈와일 한국 공식 유튜브<br>커즈와일 튜토리얼 공식 유튜브</td>
+					<td><a href="#"><img src="../../image/sub/location/home02.gif"></a><br><a href="#"><img src="../../image/sub/location/home02.gif"></a></td>
+				</tr>
+				<tr>
+					<td><img src="../../image/sub/network/kurzweil.png"><br><img src="../../image/sub/network/facebook.png"></td>
+					<td>커즈와일 공식 페이스북</td>
+					<td><a href="#"><img src="../../image/sub/location/home02.gif"></a></td>
+				</tr>
+				<tr>
+					<td><img src="../../image/sub/network/kurzweil.png"><br><img src="../../image/sub/network/sound.png"></td>
+					<td>커즈와일 사운드클라우드</td>
+					<td><a href="#"><img src="../../image/sub/location/home02.gif"></a></td>
+				</tr>
+				<tr>
+					<td><img src="../../image/sub/network/kurzweil.png"><br><img src="../../image/sub/network/cafe.png"></td>
+					<td>커즈와일 네이버 팬카페(비공식)</td>
+					<td><a href="#"><img src="../../image/sub/location/home02.gif"></a></td>
+				</tr>
+				<tr>
+					<td class="none"><img src="../../image/sub/network/albert.png"><br><img src="../../image/sub/network/facebook.png"></td>
+					<td class="none">알버트웨버 색소폰 공식 페이스북</td>
+					<td class="none"><a href="#"><img src="../../image/sub/location/home02.gif"></a></td>
+				</tr>
+			</table>
+		</div>
+		
+		<div class="line"></div>
+	</div>
+	
+	<div id="Sfooter">
+		<span class="fbg"><img src="../../image/common/fbg.png"></span>
+		<div id="fbox">
+			<span class="left">
+				<a href="#"><img src="../../image/common/flogo.png"></a><br>
+				<a href="#">이메일 무단수집거부</a>│<a href="#">사이트맵</a><br>
+				22840 인천광역시 서구 봉수대로 196<br>
+				COPYRIGHT@HDCYOUNGCHANG COMPANY.ALL RIGHT RESERVED.
+			</span>
+			<span class="right">
+				<a href="https://blog.naver.com/hdc-youngchang"><img src="../../image/common/blog.png"></a>
+				<a href="https://www.youtube.com/user/yckurzweil/featured?disable_polymer=1"><img src="../../image/common/youtube.png"></a>
+				<a href="https://www.facebook.com/ycpiano/"><img src="../../image/common/facebook.png"></a>
+				<a href="https://www.instagram.com/hdcyc_official/"><img src="../../image/common/instagram.png"></a>
+			</span>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
+
+
+
+
